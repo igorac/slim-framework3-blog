@@ -1,0 +1,42 @@
+{% extends 'admin/master.html' %}
+
+{% block admin %}
+
+    <h2 class="ml-2 my-3">Painel Administrativo</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Criado</th>
+                <th>Postado</th>
+                <th>Atualizado</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+                <tr>
+                    <td>{{ post.postId }}</td>
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.name }}</td>
+                    <td>{{ timeAgo(post.created_at) }}</td>
+                    <td>{{ timeAgo(post.updated_at) }}</td>
+                    <td><a href="/admin/post/edit/{{ post.postId }}" class="btn btn-info btn-sm">Editar</a></td>
+                    <td><button class="btn btn-secondary btn-sm">Deletar</button></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    {{ links | raw }}
+                </td>
+            </tr>
+        </tfoot>
+        
+    </table>
+
+{% endblock %}

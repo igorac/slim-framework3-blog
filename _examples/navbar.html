@@ -1,0 +1,46 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/admin/painel">Blog Smash</a>
+        </div>
+    
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Posts <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/admin/post/create">Cadastrar</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" name="s" class="form-control" placeholder="Buscar Posts">
+                </div>
+                <button type="submit" class="btn btn-default">Buscar post</button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><img src="{{ admin().photo }}" class="img-circle" height="50"></li>
+                <li><a href="#">Olá, {{ admin().name }}</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Foto</a></li>
+                        <li><a href="#">Alterar</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
